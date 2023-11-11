@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "ba8d2077-90b9-4e00-ac0c-be26fc4ffc00",
+		"name": "Waizly Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "167181"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Get All Employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWxlc21hbmFnZXIiLCJpYXQiOjE2OTk3MTc3NjcsImV4cCI6MTY5OTgwNDE2N30.IWxbQlLq0XzfCKQZC-2zDdPjAMQqQWXGR1DKrlA60mc7OPQKaOUVnSnNEz8kwFAcKgK0dZqDy3jXbLDeqJOIrw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8585/employees"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8585/employees/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWxlc21hbmFnZXIiLCJpYXQiOjE2OTk3MTc3NjcsImV4cCI6MTY5OTgwNDE2N30.IWxbQlLq0XzfCKQZC-2zDdPjAMQqQWXGR1DKrlA60mc7OPQKaOUVnSnNEz8kwFAcKgK0dZqDy3jXbLDeqJOIrw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Master Chen\",\n    \"job_title\": \"Analyst\",\n    \"salary\": 48000,\n    \"department\": \"Marketing\",\n    \"joined_date\": \"2023-06-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8585/employees"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Add Sales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWxlc21hbmFnZXIiLCJpYXQiOjE2OTk3NDIyNjAsImV4cCI6MTY5OTgyODY2MH0.5qj-2iKV84-BBj21GG07kaOJVs6_OCX3rsxZ1zEcvTVXGw0k55FWnmZUE3mIJCBR0mFJPpaIUZKNjXAmmm83iA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee_id\": 2,\n    \"sales\": 14000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8585/sales"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWxlc21hbmFnZXIiLCJpYXQiOjE2OTk3NDI0MzgsImV4cCI6MTY5OTgyODgzOH0.A1Y55VpVdPP6AkAE1ldyCABSDDxRvI3d2BEbgUM5wwuKJwnq1DbuBpo-dHlfQleO4CAnli2gnEKbdc_Pw8KCyw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8585/sales"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"salesmanager\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8585/auth/login"
+			},
+			"response": []
+		}
+	]
+}
