@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: waizly
+      POSTGRES_PASSWORD: pwdwaizly!
+      POSTGRES_DB: crm_db
+    ports:
+      - "54323:5432"
+    volumes:
+      - type: volume
+        source: db_data
+        target: /var/lib/postgresql/data
+
+volumes:
+  db_data:
