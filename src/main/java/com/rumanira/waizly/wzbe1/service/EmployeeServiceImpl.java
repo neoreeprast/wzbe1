@@ -51,6 +51,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     @Transactional
     public void deleteEmployee(Long id) {
+        employeeRepository.findById(id)
+        .orElseThrow(() -> new EntityNotFoundException("Employee not found"));
         employeeRepository.deleteById(id);
     }
     
