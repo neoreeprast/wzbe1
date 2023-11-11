@@ -14,7 +14,9 @@ this will run the backend at port 8585
 User: hradmin
 Password: password
 ```
+can only access /employees api
 ```
 User: salesmanager
 Password: password
 ```
+can access /employees and /sales api
