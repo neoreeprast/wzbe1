@@ -20,3 +20,6 @@ User: salesmanager
 Password: password
 ```
 can access /employees and /sales api
+
+## Postman collection
+postman collection file available at "Waizly Test.postman_collection.json"
